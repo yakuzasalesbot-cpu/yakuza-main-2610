@@ -2035,3 +2035,68 @@ html.js .story-line.is-visible li:nth-child(9) { animation-delay: .48s; }
   .vision-preview-map li > small { grid-column: 2; }
   .vision-preview-actions .button { width: 100%; white-space: normal; text-align: center; }
 }
+
+/* 2026-10-27 · ProdaVAI AI Operations positioning */
+.aiops-section {
+  position: relative;
+  background: linear-gradient(155deg, #0b0b0d 0%, #161616 73%, #240e11 100%);
+  border-top: 1px solid rgba(232, 220, 200, .13);
+  border-bottom: 1px solid rgba(232, 220, 200, .13);
+}
+.aiops-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+  margin: 30px 0;
+}
+.aiops-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(20px, 2.6vw, 34px);
+  border: 1px solid rgba(232, 220, 200, .18);
+  border-radius: 14px;
+  background: #171719;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .15);
+}
+.aiops-index {
+  color: #f26b71;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.aiops-card h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.22;
+  color: #f7f4ee;
+  overflow-wrap: anywhere;
+}
+.aiops-card p { margin: 0; line-height: 1.6; color: #d9d1c4; }
+.aiops-card .aiops-output {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(232, 220, 200, .16);
+  font-size: .93rem;
+}
+.aiops-card .aiops-output strong { color: #f7f4ee; }
+.aiops-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0 14px;
+}
+.aiops-bottom p { max-width: 70ch; line-height: 1.65; color: #ded6cb; }
+.aiops-bottom p span { color: #bdb1a3; }
+.aiops-bottom .button { flex-shrink: 0; }
+.aiops-disclaimer { font-size: .85rem; line-height: 1.55; color: #b1a597; }
+@media (max-width: 900px) {
+  .aiops-grid { grid-template-columns: 1fr; }
+  .aiops-bottom { flex-direction: column; align-items: flex-start; }
+  .aiops-bottom .button { display: flex; width: 100%; justify-content: center; white-space: normal; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aiops-section * { transition: none !important; }
+}
